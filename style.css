@@ -1,16 +1,17 @@
-/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap');
+
 :root {
-  --bg-dark: #0b0b0b;
-  --bg-dark-2: #111111;
+  --bg-light: #ffffff;
+  --bg-light-2: #f7f7f7;
   --purple: #8b5cf6;
-  --text-light: #ffffff;
-  --text-muted: #b5b5b5;
+  --text-dark: #111111;
+  --text-muted: #555555;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -18,10 +19,16 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: var(--bg-dark-2);
+  background-color: var(--bg-light-2);
+}
+.navbar-brand {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
 }
 .nav-link {
-  color: var(--text-light) !important;
+  color: var(--text-dark) !important;
   margin-left: 1rem;
   position: relative;
 }
@@ -44,6 +51,7 @@ body {
   background-color: var(--purple);
   border: none;
   border-radius: 10px;
+  color: #fff;
 }
 .btn-primary:hover {
   background-color: #7c3aed;
@@ -53,16 +61,14 @@ body {
 section {
   padding: 6rem 0;
 }
-.section-dark {
-  background-color: var(--bg-dark-2);
-}
 
 /* Cards */
 .card {
-  background-color: #151515;
-  border: none;
-  color: var(--text-light);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  color: var(--text-dark);
   border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 .card p {
   color: var(--text-muted);
@@ -70,11 +76,11 @@ section {
 
 /* Footer */
 footer {
-  background-color: #080808;
+  background-color: var(--bg-light-2);
   padding: 4rem 0;
 }
 footer a {
-  color: var(--text-muted);
+  color: var(--text-dark);
   text-decoration: none;
   display: block;
   margin-bottom: .5rem;
