@@ -1,0 +1,84 @@
+/* style.css */
+:root {
+  --bg-dark: #0b0b0b;
+  --bg-dark-2: #111111;
+  --purple: #8b5cf6;
+  --text-light: #ffffff;
+  --text-muted: #b5b5b5;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-dark-2);
+}
+.nav-link {
+  color: var(--text-light) !important;
+  margin-left: 1rem;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--purple);
+  transition: width .25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--purple);
+  border: none;
+  border-radius: 10px;
+}
+.btn-primary:hover {
+  background-color: #7c3aed;
+}
+
+/* Sections */
+section {
+  padding: 6rem 0;
+}
+.section-dark {
+  background-color: var(--bg-dark-2);
+}
+
+/* Cards */
+.card {
+  background-color: #151515;
+  border: none;
+  color: var(--text-light);
+  border-radius: 12px;
+}
+.card p {
+  color: var(--text-muted);
+}
+
+/* Footer */
+footer {
+  background-color: #080808;
+  padding: 4rem 0;
+}
+footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  display: block;
+  margin-bottom: .5rem;
+}
+footer a:hover {
+  color: var(--purple);
+}
