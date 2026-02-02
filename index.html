@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vyxxel — Tech Help Made Simple</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+<!-- Android / PWA -->
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/android-chrome-512x512.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Left -->
+    <a href="index.html" class="nav-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</a>
+
+    <!-- Center -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="content.html">Content</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </nav>
+
+    <!-- Right -->
+    <div class="nav-actions">
+      <a href="contact.html" class="nav-cta">Get Help</a>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-cart" onclick="openCart()">
+  🛒 <span id="cartCount">0</span>
+</button>
+    </div>
+
+  </div>
+</header>
+
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-text">
+      <h1>Tech Help,<br><span>Made Simple</span><br>For Everyone</h1>
+      <p>
+        Vyxxel provides clear, affordable tech support and education for gamers,
+        students, and everyday PC users. No jargon. No upselling.
+      </p>
+      <div class="buttons">
+        <a href="services.html" class="btn-primary">Explore Services</a>
+        <a href="about.html" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+
+    <div class="hero-cards">
+      <div class="mini-card">
+        <h4>🎮 Gaming Setup</h4>
+        <p>Optimize your gaming rig for peak performance.</p>
+      </div>
+      <div class="mini-card">
+        <h4>⚡ PC Optimization</h4>
+        <p>Speed up your system and fix slowdowns.</p>
+      </div>
+      <div class="mini-card">
+        <h4>🛠 Tech Support</h4>
+        <p>Clear, step-by-step help with real issues.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="home-services">
+  <div class="container">
+
+    <span class="badge">What We Do</span>
+    <h2 class="section-title">Services Built For You</h2>
+
+    <div class="service-card-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🎮</div>
+        <h3>Gaming & PC Setup</h3>
+        <p>
+          Get your gaming rig running perfectly. From hardware setup to
+          software optimization, we help you get the most out of your system.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Performance Optimization</h3>
+        <p>
+          Speed up slow computers, fix lag, and improve overall system
+          performance. Make your tech work like new again.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛠</div>
+        <h3>Troubleshooting & Support</h3>
+        <p>
+          Stuck with a tech problem? We provide clear, step-by-step guidance
+          to solve any issue without any confusion.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="why-vyxxel">
+  <div class="container why-grid">
+
+    <!-- LEFT FEATURES -->
+    <div class="why-features">
+
+      <div class="why-item">
+        <span class="check">✓</span>
+        <div>
+          <h4>No Confusing Jargon</h4>
+          <p>
+            We explain everything and make sure you have a clear understanding.
+          </p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <span class="check">✓</span>
+        <div>
+          <h4>Affordable & Transparent</h4>
+          <p>
+            Clear pricing with no hidden fees. We're here to help, not upsell
+            you on things you don't need.
+          </p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <span class="check">✓</span>
+        <div>
+          <h4>Built for Real People</h4>
+          <p>
+            No matter if you’re a gamer, student, or casual user, we’re here to help you understand and meet your needs.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT TEXT -->
+    <div class="why-text">
+      <h2>Why Choose <span>Vyxxel</span>?</h2>
+      <p>
+        We’re not a corporate IT company or a typical repair shop — we’re a modern tech brand dedicated to making technology simple, approachable, and stress-free.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- CONTENT / KNOWLEDGE BASE -->
+<section class="content-section">
+  <span class="content-badge">Knowledge Base</span>
+  <h2>Learn & Grow</h2>
+  <p class="content-subtext">
+    Free guides, tips, and tutorials to help you master your tech
+  </p>
+
+<div class="content-cards">
+
+  <a href="articles/gaming-setup.html" class="content-card">
+    <img src="articles/assets/pcbuildguide.pdf" alt="Gaming Setup">
+    <div class="content-body">
+      <span class="tag">Gaming</span>
+      <h3>PC Build Guide</h3>
+      <p>Everything you need to build the perfect gaming setup!</p>
+    </div>
+  </a>
+
+  <a href="articles/speed-up-pc.html" class="content-card">
+    <img src="articles/assets/speedupyourpc.png" alt="PC Performance">
+    <div class="content-body">
+      <span class="tag">Performance</span>
+      <h3>Speed Up Your PC</h3>
+      <p>Simple steps to make your computer run faster</p>
+    </div>
+  </a>
+
+  <a href="articles/perfect-audio.html" class="content-card">
+    <img src="articles/assets/perfectaudiosetup.png" alt="Audio Setup">
+    <div class="content-body">
+      <span class="tag">Audio</span>
+      <h3>Perfect Audio Setup</h3>
+      <p>Get crystal-clear sound for gaming and calls</p>
+    </div>
+  </a>
+
+</div>
+
+
+  <a href="content.html" class="content-link">
+    View All Content →
+  </a>
+</section>
+
+  <!-- SHOP PREVIEW -->
+<section class="shop-preview">
+  <div class="shop-container">
+    <div class="shop-text">
+      <span class="shop-badge">Coming Soon</span>
+      <h2>The Vyxxel Shop</h2>
+      <p>
+        Soon you'll be able to get top-tier tech accessories
+        and exclusive Vyxxel gear. We're building something special.
+      </p>
+      <a href="shop.html" class="shop-link">Learn More →</a>
+    </div>
+
+    <div class="shop-visual">
+      <span>SHOP</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-footer">
+
+ <div class="cta">
+    <div class="cta-inner">
+      <h2>Ready to Get Started?</h2>
+      <p>
+        Let’s solve your tech problems together.
+        No confusing jargon, no pressure just real help.
+      </p>
+      <a href="contact.html" class="cta-btn">
+        Contact Us Now →
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+    <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <div class="footer-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</div>
+        <p>Making technology simple, affordable, and human for everyone.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="content.html">Content</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Gaming Setup</a>
+        <a href="services.html">PC Optimization</a>
+        <a href="services.html">Audio Setup</a>
+        <a href="services.html">Troubleshooting</a>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your email">
+        <small>We respect your privacy</small>
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- GET NOTIFIED -->
+<div id="notifyModal" class="notify-modal">
+  <div class="notify-box">
+    <button class="notify-close" onclick="closeNotify()">✕</button>
+
+    <h2>Get Notified</h2>
+    <p>Be the first to know when we launch new products and exclusive drops.</p>
+
+    <input type="email" placeholder="Enter your email">
+    <button class="btn-primary">Notify Me</button>
+  </div>
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+
+  <ul id="cartItems" class="cart-items"></ul>
+
+<button class="btn-primary cart-action" onclick="goToBooking()">
+  Request Booking →
+</button>
+<div class="helper-chip">
+  <span>🔒</span>
+  <span>Nothing here is final — we’ll review it with you.</span>
+</div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+</section>
+
+<script src="js/theme.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+
+</body>
+</html>

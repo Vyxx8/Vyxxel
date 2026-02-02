@@ -1,0 +1,276 @@
+.article-container {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+}
+
+.article-tag {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.article-container h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.article-subtitle {
+  color: #94a3b8;
+  margin-bottom: 3rem;
+}
+
+.article-utils {
+  margin: 2rem 0 3rem;
+}
+
+.back-to-content {
+  color: #a78bfa;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-to-content:hover {
+  opacity: 0.85;
+}
+
+.article-section {
+  margin-bottom: 48px;
+}
+
+.article-section h2 {
+  margin-bottom: 0.75rem;
+}
+
+.article-section p {
+  color: #cbd5f5;
+  margin-bottom: 1rem;
+}
+
+.article-section ul {
+  padding-left: 1.2rem;
+}
+
+.article-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+
+/* =========================
+   ARTICLE PAGE BASE
+========================= */
+
+.article-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.article-hero {
+  margin-bottom: 48px;
+}
+
+.article-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.article-subtitle {
+  font-size: 1.1rem;
+  color: #c7c9ff;
+  max-width: 700px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.article-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.article-section h3 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #dcdcff;
+}
+
+.article-section p {
+  margin-bottom: 14px;
+  color: #d1d5db;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+.article-section ul,
+.article-section ol {
+  margin: 16px 0 20px 20px;
+}
+
+.article-section li {
+  margin-bottom: 8px;
+  color: #d1d5db;
+}
+
+.article-section strong {
+  color: #ffffff;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.article-image {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin: 20px 0;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================
+   STEP LIST
+========================= */
+
+.article-section ol {
+  counter-reset: step;
+}
+
+.article-section ol li {
+  list-style: decimal;
+  padding-left: 4px;
+}
+
+/* =========================
+   LINKS (if added later)
+========================= */
+
+.article-page a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.article-page a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 640px) {
+  .article-hero h1 {
+    font-size: 2rem;
+  }
+
+  .article-section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================
+   HELP / CONTACT SECTION
+========================= */
+
+.article-help {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.12),
+    rgba(59, 130, 246, 0.08)
+  );
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+}
+
+.article-help h2 {
+  margin-bottom: 12px;
+}
+
+.article-help p {
+  max-width: 600px;
+  margin: 0 auto 16px;
+}
+
+.article-cta {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: #8b5cf6;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.article-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+/* =========================
+   BACK TO CONTENT BUTTON
+========================= */
+
+.back-to-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  color: #a78bfa;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.back-to-content:hover {
+  color: #c4b5fd;
+  transform: translateX(-2px);
+}
+
+.back-to-content:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.back-to-content {
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+}

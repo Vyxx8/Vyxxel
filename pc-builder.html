@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PC Builder | Vyxxel</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/builder.css" />
+  <link rel="stylesheet" href="css/content.css" />
+  <!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+<!-- Android / PWA -->
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/android-chrome-512x512.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Left -->
+    <a href="index.html" class="nav-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</a>
+
+    <!-- Center -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="content.html">Content</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </nav>
+
+    <!-- Right -->
+    <div class="nav-actions">
+      <a href="contact.html" class="nav-cta">Get Help</a>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-cart" onclick="openCart()">
+  🛒 <span id="cartCount">0</span>
+</button>
+    </div>
+
+  </div>
+</header>
+
+<main class="builder">
+
+  <section class="builder-hero">
+    <h1>Build Your PC</h1>
+    <p>Choose your parts step by step.</p>
+  </section>
+
+  <div class="builder-container">
+
+    <section class="builder-steps">
+      <div class="builder-step active">1. Use Case</div>
+      <div class="builder-step">2. Budget</div>
+      <div class="builder-step">3. Parts</div>
+      <div class="builder-step">4. Review</div>
+    </section>
+
+    <section class="builder-content">
+
+      <!-- LEFT -->
+      <div class="builder-panel">
+
+        <button id="builderBack" class="builder-back" hidden>← Back</button>
+
+        <!-- USE CASE -->
+        <div class="builder-step-card" data-step="usecase">
+          <h2>Select Your Use Case</h2>
+          <div class="helper-chip">
+  <span>💡</span>
+  <span>Not sure? Pick what fits best — we’ll review it with you.</span>
+</div>
+          <div class="builder-options">
+            <button class="builder-option" data-usecase="Gaming">🎮 Gaming</button>
+            <button class="builder-option" data-usecase="School / Work">🎓 School / Work</button>
+            <button class="builder-option" data-usecase="Streaming">🎥 Streaming</button>
+            <button class="builder-option" data-usecase="Editing">🎬 Editing</button>
+            <button class="builder-option" data-usecase="General Use">💻 General Use</button>
+          </div>
+        </div>
+
+        <!-- BUDGET -->
+        <div class="builder-step-card" data-step="budget" hidden>
+          <h2>Select Your Budget</h2>\
+          <div class="helper-chip">
+  <span>💸</span>
+  <span>Choose a range — we can adjust it later.</span>
+</div>
+          <div class="builder-options">
+            <button class="builder-option" data-budget="Under $800">💸 Under $800</button>
+            <button class="builder-option" data-budget="$800 – $1200">💰 $800 – $1200</button>
+            <button class="builder-option" data-budget="$1200 – $1800">💎 $1200 – $1800</button>
+            <button class="builder-option" data-budget="$1800+">🚀 $1800+</button>
+          </div>
+        </div>
+
+        <!-- PARTS -->
+        <div class="builder-step-card" data-step="parts" hidden>
+          <h2>Select Your Parts</h2>
+
+          <h3>CPU</h3><div id="cpuOptions" class="builder-options"></div>
+          <h3>GPU</h3><div id="gpuOptions" class="builder-options"></div>
+          <h3>RAM</h3><div id="ramOptions" class="builder-options"></div>
+          <h3>Storage</h3><div id="storageOptions" class="builder-options"></div>
+          <h3>Power Supply</h3><div id="psuOptions" class="builder-options"></div>
+          <h3>Case</h3><div id="caseOptions" class="builder-options"></div>
+        </div>
+
+        <!-- REVIEW ✅ MOVED INSIDE PANEL -->
+        <div class="builder-step-card" data-step="review" hidden>
+          <h2>Review Your Build</h2>
+          <p class="performance-tier">
+  Performance Tier: <strong id="reviewPerformance">—</strong>
+</p>
+          <ul class="review-list">
+            <li>CPU: <span id="reviewCPU"></span></li>
+            <li>GPU: <span id="reviewGPU"></span></li>
+            <li>RAM: <span id="reviewRAM"></span></li>
+            <li>Storage: <span id="reviewStorage"></span></li>
+            <li>PSU: <span id="reviewPSU"></span></li>
+            <li>Case: <span id="reviewCase"></span></li>
+          </ul>
+          <h3>Total: <span id="reviewTotal"></span></h3>
+          <strong>🛠️ What happens next?</strong>
+  <p>
+    When you contact us, we’ll review this build with you, answer questions,
+    suggest improvements if needed, and guide you on getting this exact setup.
+  </p>
+        </div>
+        
+
+      </div>
+
+      <!-- RIGHT -->
+      <aside class="builder-summary">
+        <h3>Your Build</h3>
+        <ul class="builder-summary-list">
+          <li><span>Use Case</span><span id="buildUseCase">—</span></li>
+          <li><span>Budget</span><span id="buildBudget">—</span></li>
+          <li><span>CPU</span><span id="buildCPU">—</span></li>
+          <li><span>GPU</span><span id="buildGPU">—</span></li>
+          <li><span>RAM</span><span id="buildRAM">—</span></li>
+          <li><span>Storage</span><span id="buildStorage">—</span></li>
+          <li><span>Power Supply</span><span id="buildPSU">—</span></li>
+          <li><span>Case</span><span id="buildCase">—</span></li>
+          <li><strong>Total</strong><strong id="buildTotal">$0</strong></li>
+        </ul>
+
+        <button class="builder-cta" disabled>Add Build to Cart</button>
+      </aside>
+
+    </section>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+    <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <div class="footer-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</div>
+        <p>Making technology simple, affordable, and human for everyone.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="content.html">Content</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Gaming Setup</a>
+        <a href="services.html">PC Optimization</a>
+        <a href="services.html">Audio Setup</a>
+        <a href="services.html">Troubleshooting</a>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your email">
+        <small>We respect your privacy</small>
+      </div>
+
+    </div>
+  </footer>
+
+<!-- CART -->
+<div id="cartDrawer" class="cart-drawer">
+
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+
+  <ul id="cartItems" class="cart-items"></ul>
+
+<button class="btn-primary cart-action" onclick="goToBooking()">
+  Request Booking →
+</button>
+<div class="helper-chip">
+  <span>🔒</span>
+  <span>Nothing here is final — we’ll review it with you.</span>
+</div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/cart.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/builder.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

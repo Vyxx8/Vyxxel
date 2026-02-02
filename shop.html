@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vyxxel Shop</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+<!-- Android / PWA -->
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/android-chrome-512x512.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Left -->
+    <a href="index.html" class="nav-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</a>
+
+    <!-- Center -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="content.html">Content</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </nav>
+
+    <!-- Right -->
+    <div class="nav-actions">
+      <a href="contact.html" class="nav-cta">Get Help</a>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-cart" onclick="openCart()">
+  🛒 <span id="cartCount">0</span>
+</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- SHOP HERO -->
+<section class="shop-hero">
+  <div class="shop-hero-inner">
+    <div class="shop-icon">🛍️</div>
+    <h1>Vyxxel Shop</h1>
+    <p>Premium services and accessories to level up your tech game</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="shop-filters">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="services">Services</button>
+  <button data-filter="accessories">Accessories</button>
+</div>
+
+<!-- PRODUCTS -->
+<section class="shop-grid container">
+
+  <!-- PRODUCT: SERVICE -->
+  <div class="product-card featured" data-category="services">
+    <span class="product-badge">Featured</span>
+
+    <div class="product-image placeholder services">SERVICE</div>
+
+    <span class="product-category">Services</span>
+    <h3>Vyxxel Tech Support (1 Hour)</h3>
+    <p>One-on-one remote tech support session with a Vyxxel expert</p>
+
+    <div class="product-footer">
+      <span class="price">$49.99</span>
+<button class="btn-primary"
+  onclick="addToCart({
+    id: 'tech-support-1hr',
+    name: 'Vyxxel Tech Support (1 Hour)',
+    type: 'service'
+  })">
+  Add to Cart
+</button>
+
+    </div>
+  </div>
+
+  <!-- PRODUCT: ACCESSORY -->
+  <div class="product-card" data-category="accessories">
+    <span class="product-badge dark">Coming Soon</span>
+
+    <div class="product-image placeholder accessories">ACCESSORY</div>
+
+    <span class="product-category">Accessories</span>
+    <h3>Vyxxel Branded Mouse Pad</h3>
+    <p>Premium gaming mouse pad with Vyxxel branding</p>
+
+    <div class="product-footer">
+      <span class="price">$24.99</span>
+      <button class="btn-disabled">Coming Soon</button>
+    </div>
+  </div>
+
+  <!-- PRODUCT: ACCESSORY -->
+  <div class="product-card" data-category="accessories">
+    <span class="product-badge dark">Coming Soon</span>
+
+    <div class="product-image placeholder accessories">ACCESSORY</div>
+
+    <span class="product-category">Accessories</span>
+    <h3>Cable Management Kit</h3>
+    <p>Complete cable management solution for clean setups</p>
+
+    <div class="product-footer">
+      <span class="price">$29.99</span>
+      <button class="btn-disabled">Coming Soon</button>
+    </div>
+  </div>
+
+</section>
+
+<!-- GET NOTIFIED -->
+<div id="notifyModal" class="notify-modal">
+  <div class="notify-box">
+    <button class="notify-close" onclick="closeNotify()">✕</button>
+
+    <h2>Get Notified</h2>
+    <p>Be the first to know when we launch new products and exclusive drops.</p>
+
+    <input type="email" placeholder="Enter your email">
+    <button class="btn-primary">Notify Me</button>
+  </div>
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+
+  <ul id="cartItems" class="cart-items"></ul>
+
+<button class="btn-primary cart-action" onclick="goToBooking()">
+  Request Booking →
+</button>
+<div class="helper-chip">
+  <span>🔒</span>
+  <span>Nothing here is final — we’ll review it with you.</span>
+</div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<!-- FOOTER -->
+    <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <div class="footer-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</div>
+        <p>Making technology simple, affordable, and human for everyone.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="content.html">Content</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Gaming Setup</a>
+        <a href="services.html">PC Optimization</a>
+        <a href="services.html">Audio Setup</a>
+        <a href="services.html">Troubleshooting</a>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your email">
+        <small>We respect your privacy</small>
+      </div>
+
+    </div>
+  </footer>
+
+<script src="js/theme.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>

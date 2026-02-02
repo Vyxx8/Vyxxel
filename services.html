@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vyxxel — Services</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+<!-- Android / PWA -->
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/android-chrome-512x512.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Left -->
+    <a href="index.html" class="nav-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</a>
+
+    <!-- Center -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="content.html">Content</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </nav>
+
+    <!-- Right -->
+    <div class="nav-actions">
+      <a href="contact.html" class="nav-cta">Get Help</a>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-cart" onclick="openCart()">
+  🛒 <span id="cartCount">0</span>
+</button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- HEADER -->
+<section class="services-hero">
+  <div class="container center">
+    <span class="breadcrumb">Home › Services</span>
+    <h1>Our Services</h1>
+    <p class="hero-subtext">
+      We provide clear, affordable tech support that saves you time and frustration.
+      No confusing jargon, no upselling—just real help from people who care.
+    </p>
+    <div class="helper-chip">
+  <span>🤔</span>
+  <span>Not sure which service fits? Pick one — we can adjust it together.</span>
+</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="container services-grid">
+
+  <!-- LEFT CATEGORIES -->
+  <aside class="service-categories">
+    <button onclick="scrollToService('gaming')">🎮 Gaming & PC Setup</button>
+    <button onclick="scrollToService('performance')">⚡ Performance Optimization</button>
+    <button onclick="scrollToService('audio')">🎧 Audio & Mic Setup</button>
+    <button onclick="scrollToService('troubleshoot')">🛠 Troubleshooting</button>
+  </aside>
+
+  <!-- RIGHT CARDS -->
+  <div class="service-details">
+
+    <div class="service-box" id="gaming">
+      <div class="service-header">
+        <div class="service-icon">🎮</div>
+        <h3>Gaming & PC Setup</h3>
+      </div>
+      <p class="service-desc">
+        Get your gaming rig running at peak performance with expert guidance.
+      </p>
+
+      <h4 class="service-subtitle">What’s Included:</h4>
+      <ul class="service-list">
+        <li>Hardware installation and configuration</li>
+        <li>Graphics settings optimization</li>
+        <li>Driver updates and management</li>
+        <li>Game-specific performance tuning</li>
+        <li>RGB and peripheral setup</li>
+      </ul>
+
+      <a href="contact.html" class="service-link">Get Help With This →</a>
+    </div>
+
+    <div class="service-box" id="performance">
+      <div class="service-header">
+        <div class="service-icon">⚡</div>
+        <h3>Performance Optimization</h3>
+      </div>
+      <p class="service-desc">
+        Speed up your computer and eliminate frustrating slowdowns.
+      </p>
+
+      <h4 class="service-subtitle">What’s Included:</h4>
+      <ul class="service-list">
+        <li>Startup cleanup</li>
+        <li>Storage optimization</li>
+        <li>System tuning</li>
+      </ul>
+
+      <a href="contact.html" class="service-link">Get Help With This →</a>
+    </div>
+
+    <div class="service-box" id="audio">
+      <div class="service-header">
+        <div class="service-icon">🎧</div>
+        <h3>Audio & Mic Setup</h3>
+      </div>
+      <p class="service-desc">
+        Crystal-clear sound for gaming, streaming, and calls.
+      </p>
+
+      <h4 class="service-subtitle">What’s Included:</h4>
+      <ul class="service-list">
+        <li>Mic configuration</li>
+        <li>Noise suppression</li>
+        <li>OBS & Discord setup</li>
+      </ul>
+
+      <a href="contact.html" class="service-link">Get Help With This →</a>
+    </div>
+
+    <div class="service-box" id="troubleshoot">
+      <div class="service-header">
+        <div class="service-icon">🛠</div>
+        <h3>Troubleshooting</h3>
+      </div>
+      <p class="service-desc">
+        Clear step-by-step guidance to solve any tech issue.
+      </p>
+
+      <h4 class="service-subtitle">What’s Included:</h4>
+      <ul class="service-list">
+        <li>Error fixing</li>
+        <li>Software issues</li>
+        <li>Network problems</li>
+      </ul>
+
+      <a href="contact.html" class="service-link">Get Help With This →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container center">
+    <h2>Simple, Transparent Pricing</h2>
+    <p class="pricing-sub">
+      No hidden fees, no surprises. Just honest pricing for quality help.
+    </p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>$N/A</h3>
+        <span>per hour</span>
+        <p>
+          Pay only for the time we spend helping you.
+          Most issues resolved in under an hour.
+        </p>
+      </div>
+
+      <div class="pricing-card featured">
+        <h3>Packages</h3>
+        <span>coming soon</span>
+        <p>
+          Bundled services at discounted rates for ongoing support
+          and optimization.
+        </p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>$0</h3>
+        <span>hidden fees</span>
+        <p>
+          What you see is what you pay.
+          No surprise charges or unnecessary upsells.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="container how-it-works">
+  <h2>How It Works</h2>
+
+  <div class="steps">
+    <div class="step">
+      <span class="step-number">1</span>
+      <div>
+        <strong>Reach Out</strong>
+        <p>Tell us what you need help with.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div>
+        <strong>We Connect</strong>
+        <p>We set up a time that works for you.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div>
+        <strong>We Help</strong>
+        <p>Clear, step-by-step guidance.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">4</span>
+      <div>
+        <strong>You’re Set</strong>
+        <p>Problem solved and followed up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function scrollToService(id) {
+  const el = document.getElementById(id);
+  const navHeight = document.querySelector('.navbar').offsetHeight;
+  const y = el.getBoundingClientRect().top + window.scrollY - navHeight - 24;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+</script>
+
+<!-- CTA + FOOTER WRAPPER -->
+<section class="cta-footer">
+
+ <div class="cta">
+    <div class="cta-inner">
+      <h2>Ready to Get Started?</h2>
+      <p>
+        Let’s solve your tech problems together.
+        No confusing jargon, no pressure—just real help.
+      </p>
+      <a href="contact.html" class="cta-btn">
+        Contact Us Now →
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+    <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <div class="footer-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</div>
+        <p>Making technology simple, affordable, and human for everyone.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="content.html">Content</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Gaming Setup</a>
+        <a href="services.html">PC Optimization</a>
+        <a href="services.html">Audio Setup</a>
+        <a href="services.html">Troubleshooting</a>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your email">
+        <small>We respect your privacy</small>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- GET NOTIFIED -->
+<div id="notifyModal" class="notify-modal">
+  <div class="notify-box">
+    <button class="notify-close" onclick="closeNotify()">✕</button>
+
+    <h2>Get Notified</h2>
+    <p>Be the first to know when we launch new products and exclusive drops.</p>
+
+    <input type="email" placeholder="Enter your email">
+    <button class="btn-primary">Notify Me</button>
+  </div>
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+
+  <ul id="cartItems" class="cart-items"></ul>
+
+<button class="btn-primary cart-action" onclick="goToBooking()">
+  Request Booking →
+</button>
+<div class="helper-chip">
+  <span>🔒</span>
+  <span>Nothing here is final — we’ll review it with you.</span>
+</div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+</section>
+
+<script src="js/theme.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+
+</body>
+</html>

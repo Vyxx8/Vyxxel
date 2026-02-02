@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Get Help | Vyxxel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+
+<!-- Android / PWA -->
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/android-chrome-512x512.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+
+    <!-- Left -->
+    <a href="index.html" class="nav-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</a>
+
+    <!-- Center -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="content.html">Content</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </nav>
+
+    <!-- Right -->
+    <div class="nav-actions">
+      <a href="contact.html" class="nav-cta">Get Help</a>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="nav-cart" onclick="openCart()">
+  🛒 <span id="cartCount">0</span>
+</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+  <div class="container contact-grid">
+
+    <!-- LEFT -->
+    <div class="contact-info">
+      <h1>Get Help</h1>
+      <p>
+        Reach out and let us know what you need help with.
+        We’ll respond quickly—no pressure, no sales pitch.
+      </p>
+
+      <div class="contact-features">
+        <div class="feature">
+          <span>⏱</span>
+          <div>
+            <strong>Quick Response</strong>
+            <p>Usually within 24 hours</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span>🛡</span>
+          <div>
+            <strong>No Pressure</strong>
+            <p>No hard sells or upsells</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span>❤</span>
+          <div>
+            <strong>Human Support</strong>
+            <p>Real people, real help</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form class="contact-form" onsubmit="submitContact(event)">
+      <label>
+        Your Name
+        <input type="text" required placeholder="John Doe">
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" required placeholder="john@example.com">
+      </label>
+
+      <label>
+        What do you need help with?
+        <select id="serviceSelect">
+          <option value="">Select a service</option>
+        </select>
+      </label>
+
+      <div class="helper-chip">
+  <span>✍️</span>
+  <span>No need to explain perfectly — your details are already included.</span>
+</div>
+
+      <label>
+        Tell us more
+        <textarea id="detailsInput" rows="5"
+          placeholder="Describe your issue or what you need help with..."></textarea>
+      </label>
+
+      <button class="btn-primary" type="submit">
+        Send Message → We'll take it from here
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- OTHER CONTACT OPTIONS -->
+<section class="contact-options">
+  <div class="container grid-3">
+    <div class="info-card">
+      <h3>Email</h3>
+      <p>help@vyxxel.com</p>
+    </div>
+    <div class="info-card">
+      <h3>Discord</h3>
+      <p>Join our community</p>
+    </div>
+    <div class="info-card">
+      <h3>FAQ</h3>
+      <p>Quick answers</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-container">
+
+    <h2>Common Questions</h2>
+    <p class="faq-subtitle">Quick answers to questions you might have</p>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How quickly can you help me?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Most requests are answered within 24 hours. Urgent issues may be handled sooner depending on availability.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How much does it cost?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Pricing depends on the issue. Simple advice is often free, while more complex help may require a paid service.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do I need to be tech-savvy?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Not at all. Everything is explained in simple terms, and guidance is tailored to your experience level.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What if you can't fix my problem?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>If we can’t help, we’ll be honest and point you in the right direction or recommend other options.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you offer remote support?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes, remote help is available for many issues depending on the situation and your setup.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can you help with Mac computers?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Yes — we can help with both Windows and Mac systems.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+    <footer class="footer">
+    <div class="container footer-grid">
+
+      <div>
+        <div class="footer-logo">
+  <img src="assets/Vyxxel.png" alt="Vyxxel logo">
+</div>
+        <p>Making technology simple, affordable, and human for everyone.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="content.html">Content</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Gaming Setup</a>
+        <a href="services.html">PC Optimization</a>
+        <a href="services.html">Audio Setup</a>
+        <a href="services.html">Troubleshooting</a>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+        <input type="email" placeholder="Your email">
+        <small>We respect your privacy</small>
+      </div>
+
+    </div>
+  </footer>
+
+    <!-- GET NOTIFIED -->
+<div id="notifyModal" class="notify-modal">
+  <div class="notify-box">
+    <button class="notify-close" onclick="closeNotify()">✕</button>
+
+    <h2>Get Notified</h2>
+    <p>Be the first to know when we launch new products and exclusive drops.</p>
+
+    <input type="email" placeholder="Enter your email">
+    <button class="btn-primary">Notify Me</button>
+  </div>
+</div>
+
+<div id="cartDrawer" class="cart-drawer">
+
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+
+  <ul id="cartItems" class="cart-items"></ul>
+
+<button class="btn-primary cart-action" onclick="goToBooking()">
+  Request Booking →
+</button>
+<div class="helper-chip">
+  <span>🔒</span>
+  <span>Nothing here is final — we’ll review it with you.</span>
+</div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<!-- CART DRAWER -->
+<div id="cartDrawer" class="cart-drawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button onclick="closeCart()">✕</button>
+  </div>
+  <ul id="cartItems"></ul>
+  <button class="btn-primary" onclick="goToBooking()">Request Booking →</button>
+</div>
+
+<script src="js/cart.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/shop.js"></script>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+
+      document.querySelectorAll('.faq-item').forEach(i => {
+        if (i !== item) i.classList.remove('active');
+      });
+
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+
+</body>
+</html>
