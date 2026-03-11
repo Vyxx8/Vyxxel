@@ -73,71 +73,104 @@
 
   <!-- LEFT CATEGORIES -->
   <aside class="service-categories">
-    <button onclick="scrollToService('gaming')">🎮 Gaming & PC Setup</button>
-    <button onclick="scrollToService('performance')">⚡ Performance Optimization</button>
-    <button onclick="scrollToService('audio')">🎧 Audio & Mic Setup</button>
+    <button onclick="scrollToService('pc-repair')">🖥 PC Repair</button>
+    <button onclick="scrollToService('phone-repair')">📱 Phone Repair</button>
+    <button onclick="scrollToService('controller-repair')">🎮 Controller Repair</button>
+    <button onclick="scrollToService('pc-build')">🔧 PC Building</button>
+    <button onclick="scrollToService('optimization')">⚡ PC Optimization</button>
     <button onclick="scrollToService('troubleshoot')">🛠 Troubleshooting</button>
   </aside>
 
   <!-- RIGHT CARDS -->
   <div class="service-details">
 
-    <div class="service-box" id="gaming">
+    <div class="service-box" id="pc-repair">
+      <div class="service-header">
+        <div class="service-icon">🖥</div>
+        <h3>PC Repair</h3>
+      </div>
+      <p class="service-desc">Something wrong with your computer? Whether it won't turn on, runs slow, or has hardware issues — we'll diagnose and fix it.</p>
+      <h4 class="service-subtitle">What's Included:</h4>
+      <ul class="service-list">
+        <li>Diagnosis & troubleshooting</li>
+        <li>Hardware repairs & replacements</li>
+        <li>Virus & malware removal</li>
+        <li>OS reinstalls & recovery</li>
+        <li>Cooling & thermal issues</li>
+      </ul>
+      <p class="service-price" style="color:#a855f7; font-weight:600; margin-top:12px;">Starting at $30 — most repairs $30–$80</p>
+      <a href="contact.html" class="service-link">Get Help With This →</a>
+    </div>
+
+    <div class="service-box" id="phone-repair">
+      <div class="service-header">
+        <div class="service-icon">📱</div>
+        <h3>Phone Repair</h3>
+      </div>
+      <p class="service-desc">Cracked screen, battery issues, or software problems — we handle common phone repairs quickly and affordably.</p>
+      <h4 class="service-subtitle">What's Included:</h4>
+      <ul class="service-list">
+        <li>Screen assessments</li>
+        <li>Battery diagnostics</li>
+        <li>Software & boot issues</li>
+        <li>Data recovery assistance</li>
+        <li>General phone troubleshooting</li>
+      </ul>
+      <p class="service-price" style="color:#a855f7; font-weight:600; margin-top:12px;">Starting at $30 — pricing depends on issue</p>
+      <a href="contact.html" class="service-link">Get Help With This →</a>
+    </div>
+
+    <div class="service-box" id="controller-repair">
       <div class="service-header">
         <div class="service-icon">🎮</div>
-        <h3>Gaming & PC Setup</h3>
+        <h3>Controller Repair</h3>
       </div>
-      <p class="service-desc">
-        Get your gaming rig running at peak performance with expert guidance.
-      </p>
-
-      <h4 class="service-subtitle">What’s Included:</h4>
+      <p class="service-desc">Stick drift, sticky buttons, or connection issues — we fix PlayStation, Xbox, and other controllers.</p>
+      <h4 class="service-subtitle">What's Included:</h4>
       <ul class="service-list">
-        <li>Hardware installation and configuration</li>
-        <li>Graphics settings optimization</li>
-        <li>Driver updates and management</li>
-        <li>Game-specific performance tuning</li>
-        <li>RGB and peripheral setup</li>
+        <li>Stick drift repair</li>
+        <li>Button & trigger fixes</li>
+        <li>Connectivity troubleshooting</li>
+        <li>Cleaning & maintenance</li>
+        <li>PS4, PS5, Xbox & more</li>
       </ul>
-
+      <p class="service-price" style="color:#a855f7; font-weight:600; margin-top:12px;">Starting at $20</p>
       <a href="contact.html" class="service-link">Get Help With This →</a>
     </div>
 
-    <div class="service-box" id="performance">
+    <div class="service-box" id="pc-build">
+      <div class="service-header">
+        <div class="service-icon">🔧</div>
+        <h3>PC Building</h3>
+      </div>
+      <p class="service-desc">Want a custom PC but don't know where to start? We'll help you pick the right parts for your budget and put it together.</p>
+      <h4 class="service-subtitle">What's Included:</h4>
+      <ul class="service-list">
+        <li>Parts selection for your budget</li>
+        <li>Full assembly guidance</li>
+        <li>OS installation & setup</li>
+        <li>Performance testing</li>
+        <li>Use our PC Builder tool to start</li>
+      </ul>
+      <p class="service-price" style="color:#a855f7; font-weight:600; margin-top:12px;">Starting at $50 — varies by build</p>
+      <a href="pc-builder.html" class="service-link">Try the PC Builder →</a>
+    </div>
+
+    <div class="service-box" id="optimization">
       <div class="service-header">
         <div class="service-icon">⚡</div>
-        <h3>Performance Optimization</h3>
+        <h3>PC Optimization</h3>
       </div>
-      <p class="service-desc">
-        Speed up your computer and eliminate frustrating slowdowns.
-      </p>
-
-      <h4 class="service-subtitle">What’s Included:</h4>
+      <p class="service-desc">Is your PC slow, laggy, or overheating? We tune it up so it runs like new.</p>
+      <h4 class="service-subtitle">What's Included:</h4>
       <ul class="service-list">
-        <li>Startup cleanup</li>
+        <li>Startup & background app cleanup</li>
         <li>Storage optimization</li>
-        <li>System tuning</li>
+        <li>Driver updates</li>
+        <li>Thermal & cooling check</li>
+        <li>Gaming performance tuning</li>
       </ul>
-
-      <a href="contact.html" class="service-link">Get Help With This →</a>
-    </div>
-
-    <div class="service-box" id="audio">
-      <div class="service-header">
-        <div class="service-icon">🎧</div>
-        <h3>Audio & Mic Setup</h3>
-      </div>
-      <p class="service-desc">
-        Crystal-clear sound for gaming, streaming, and calls.
-      </p>
-
-      <h4 class="service-subtitle">What’s Included:</h4>
-      <ul class="service-list">
-        <li>Mic configuration</li>
-        <li>Noise suppression</li>
-        <li>OBS & Discord setup</li>
-      </ul>
-
+      <p class="service-price" style="color:#a855f7; font-weight:600; margin-top:12px;">Starting at $30</p>
       <a href="contact.html" class="service-link">Get Help With This →</a>
     </div>
 
@@ -146,22 +179,20 @@
         <div class="service-icon">🛠</div>
         <h3>Troubleshooting</h3>
       </div>
-      <p class="service-desc">
-        Clear step-by-step guidance to solve any tech issue.
-      </p>
-
-      <h4 class="service-subtitle">What’s Included:</h4>
+      <p class="service-desc">Not sure what's wrong? Describe the issue and we'll figure it out together.</p>
+      <h4 class="service-subtitle">What's Included:</h4>
       <ul class="service-list">
-        <li>Error fixing</li>
-        <li>Software issues</li>
-        <li>Network problems</li>
+        <li>Error & crash diagnosis</li>
+        <li>Software conflicts</li>
+        <li>Network & WiFi issues</li>
+        <li>Peripheral problems</li>
+        <li>General tech questions</li>
       </ul>
-
+      <p class="service-price" style="color:#a855f7; font-weight:600; margin-top:12px;">Starting at $20</p>
       <a href="contact.html" class="service-link">Get Help With This →</a>
     </div>
 
-  </div>
-</section>
+  </div></section>
 
 <!-- PRICING -->
 <section class="pricing">
