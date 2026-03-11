@@ -1,4 +1,14 @@
+/* =====================
+   EMAILJS CONFIG
+===================== */
+const EMAILJS_SERVICE_ID = "service_0e2f9no";
+const EMAILJS_TEMPLATE_ID = "template_cms0aym";
+const EMAILJS_PUBLIC_KEY = "yCo9odABRj8ARxWCb";
+
 document.addEventListener("DOMContentLoaded", () => {
+  // Init EmailJS
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+
   /* =====================
      SERVICE CATALOG
   ====================== */
@@ -70,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =====================
-   FORM SUBMIT → FORMSPREE
+   FORM SUBMIT → EMAILJS
 ===================== */
 async function submitContact(e) {
   e.preventDefault();
@@ -78,49 +88,52 @@ async function submitContact(e) {
   const form = e.target;
   const btn = form.querySelector("button[type='submit']");
 
-  // Get values
   const name = form.querySelector("input[type='text']").value.trim();
   const email = form.querySelector("input[type='email']").value.trim();
   const service = document.getElementById("serviceSelect")?.value || "Not specified";
-  const details = document.getElementById("detailsInput")?.value.trim() || "";
+  const details = document.getElementById("detailsInput")?.value.trim() || "No details provided";
 
-  // Basic validation
   if (!name || !email) {
     showToast("Please fill in your name and email.");
     return;
   }
 
-  // Disable button while sending
   btn.disabled = true;
   btn.textContent = "Sending...";
 
   try {
-    const response = await fetch("https://formspree.io/f/xlgpbree", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        service,
-        message: details
-      })
+    // 1. Notify YOU about the new request
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_name: "Vyxxel",
+      to_email: "basselosman14@gmail.com",
+      from_name: name,
+      from_email: email,
+      service: service,
+      message: `New request from ${name} (${email})\n\nService: ${service}\n\nDetails:\n${details}`,
+      reply_to: email
     });
 
-    if (response.ok) {
-      showToast("Message sent! We'll be in touch soon. 🎉");
-      form.reset();
-      btn.textContent = "Message Sent ✓";
-      setTimeout(() => {
-        btn.disabled = false;
-        btn.textContent = "Send Message → We'll take it from here";
-      }, 4000);
-    } else {
-      throw new Error("Form submission failed");
-    }
+    // 2. Send confirmation to the CUSTOMER
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_name: name,
+      to_email: email,
+      from_name: "Vyxxel",
+      from_email: "basselosman14@gmail.com",
+      service: service,
+      message: `Hey ${name}! 👋\n\nThanks for reaching out to Vyxxel. We got your request for "${service}" and we'll get back to you within 24 hours.\n\nIf anything is urgent, just reply to this email.\n\n— The Vyxxel Team`,
+      reply_to: "basselosman14@gmail.com"
+    });
+
+    showToast("Message sent! Check your email for confirmation. 🎉");
+    form.reset();
+    btn.textContent = "Message Sent ✓";
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.textContent = "Send Message → We'll take it from here";
+    }, 4000);
+
   } catch (err) {
+    console.error("EmailJS error:", err);
     showToast("Something went wrong. Please try again.");
     btn.disabled = false;
     btn.textContent = "Send Message → We'll take it from here";
