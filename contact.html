@@ -34,11 +34,9 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="content.html">Content</a>
-      <a href="shop.html" class="active">Shop</a>
+      <a href="pc-builder.html">PC Builder</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="pc-builder.html">PC Builder</a>
     </nav>
 
     <!-- Right -->
@@ -134,7 +132,7 @@
   <div class="container grid-3">
     <div class="info-card">
       <h3>Email</h3>
-      <p>help@vyxxel.com</p>
+      <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e8e5ecf0c0f6f9f8f8e5ecaee3efed">[email&#160;protected]</a></p>
     </div>
     <div class="info-card">
       <h3>Discord</h3>
@@ -225,6 +223,7 @@
   <img src="assets/Vyxxel.png" alt="Vyxxel logo">
 </div>
         <p>Making technology simple, affordable, and human for everyone.</p>
+        <p style="color:#a855f7; font-size:13px; margin-top:8px;">📍 Based in Queens, NY</p>
       </div>
 
       <div>
@@ -287,17 +286,9 @@
 
 <div id="toast" class="toast"></div>
 
-<!-- CART DRAWER -->
-<div id="cartDrawer" class="cart-drawer">
-  <div class="cart-header">
-    <h3>Your Cart</h3>
-    <button onclick="closeCart()">✕</button>
-  </div>
-  <ul id="cartItems"></ul>
-  <button class="btn-primary" onclick="goToBooking()">Request Booking →</button>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/theme.js"></script>
@@ -340,16 +331,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (
-      navLinks.classList.contains('open') &&
-      !navLinks.contains(e.target) &&
-      !hamburger.contains(e.target)
-    ) {
-      navLinks.classList.remove('open');
-    }
-  });
-});
-</script>
-
-</body>
-</html>
-
